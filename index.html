@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Supply Name And Age</title>
+</head>
+<script>
+    function displayInfo(){
+        var name = document.getElementById('nameInput'). value;
+        var year = document.getElementById('yearInput'). value;
+        var age = 2022 - year;
+        var info = name + ", your age is " + age;
+        alert(info);
+        var display = document.getElementById('display');
+        display.innerHTML+=`${name} , your age is ${age}`;
+    }
+</script>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>Biodata</h1>
+                <input type="text" placeholder="What should I call you?" id="nameInput" class="form-control w-25">
+            </div>
+            <div class="col-12 mt-3">
+                <input type="text" placeholder="Input year of birth" id="yearInput" class="form-control w-25">
+                <button class="btn btn-outline-primary mt-3 form-control w-25" onclick="displayInfo()">Click Me</button>
+            </div>
+            <div class= "ml-2 mt-5 btn-primary" id="display"></div>
+        </div>
+</body>
+</html>
